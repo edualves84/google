@@ -25,7 +25,6 @@ public class Google {
         url2 = "https://cacaushow.com.br";
         System.setProperty("webdriver.chrome.driver", "drivers/chrome/90/chromedriver.exe" );
         driver = new ChromeDriver();
-
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(60000, TimeUnit.MILLISECONDS);
 
@@ -43,8 +42,8 @@ public class Google {
         driver.findElement(By.name("q")).sendKeys("ovo" + Keys.ENTER);
         driver.findElement(By.id("consent-tracking")).click();
         assertEquals(ovo,driver.findElement(By.cssSelector("div.it__shelf__item:nth-child(3) div.product:nth-child(3) div.product-tile div.tile-body div.pdp-link > a.link")).getText());
-        assertEquals(preco,driver.findElement(By.cssSelector(" div.it__shelf__item:nth-child(3) div.product:nth-child(3) div.product-tile div.tile-body div.it__shelf--price div.it__shelf--bestPrice > div.it__shelf__discountPrice")).getText());
-        assertEquals(ovo2,driver.findElement(By.cssSelector(" div.it__shelf__item:nth-child(9) div.product:nth-child(3) div.product-tile div.tile-body div.pdp-link > a.link")).getText());
+        assertEquals(preco,driver.findElement(By.cssSelector("div.it__shelf__item:nth-child(3) div.product:nth-child(3) div.product-tile div.tile-body div.it__shelf--price div.it__shelf--bestPrice > div.it__shelf__discountPrice")).getText());
+        assertEquals(ovo2,driver.findElement(By.cssSelector("div.col-sm-12.col-md-9 div.row.product-grid:nth-child(2) div.it__shelf__item:nth-child(8) div.product:nth-child(3) div.product-tile div.tile-body div.pdp-link > a.link")).getText());
 
 
     }
